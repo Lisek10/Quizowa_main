@@ -1,0 +1,326 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\shared\\_answerformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\shared\\_answerformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\_questionformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\_questionformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\userstats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\userstats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\mystatistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\mystatistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\myquizzes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\myquizzes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|c:\\users\\adrian\\desktop\\quizowa-main\\views\\quiz\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C4B6FB8-B201-6F11-13A2-34A0283DA5E4}|Quizowa.csproj|solutionrelative:views\\quiz\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T10:54:47.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Models\\Quiz.cs",
+              "RelativeDocumentMoniker": "Models\\Quiz.cs",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Models\\Quiz.cs",
+              "RelativeToolTip": "Models\\Quiz.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T10:48:48.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MyQuizzes.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\MyQuizzes.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\MyQuizzes.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\MyQuizzes.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\MyQuizzes.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:13:06.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Index.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:13:04.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\Edit.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:12:59.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Create.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\Create.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:12:54.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuizController.cs",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Controllers\\QuizController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Controllers\\QuizController.cs",
+              "RelativeToolTip": "Controllers\\QuizController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAGMCAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T10:05:03.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_QuestionFormPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\_QuestionFormPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\_QuestionFormPartial.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\_QuestionFormPartial.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\_QuestionFormPartial.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAhwBUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:12:54.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Models\\Answer.cs",
+              "RelativeDocumentMoniker": "Models\\Answer.cs",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Models\\Answer.cs",
+              "RelativeToolTip": "Models\\Answer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T10:26:54.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AnswerFormPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Shared\\_AnswerFormPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AnswerFormPartial.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Shared\\_AnswerFormPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AnswerFormPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:14:49.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-22T10:16:07.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Models\\Question.cs",
+              "RelativeDocumentMoniker": "Models\\Question.cs",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Models\\Question.cs",
+              "RelativeToolTip": "Models\\Question.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T10:40:07.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MyStatistics.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\MyStatistics.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\MyStatistics.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\MyStatistics.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\MyStatistics.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:13:10.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:32:49.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Result.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Result.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\Result.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Result.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\Result.cshtml",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:13:15.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Solve.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Solve.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\Solve.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Solve.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\Solve.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:13:12.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserStats.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\UserStats.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\UserStats.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\UserStats.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\UserStats.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:13:18.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Adrian\\Desktop\\Quizowa-main\\Views\\Quiz\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\Delete.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T10:12:57.223Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

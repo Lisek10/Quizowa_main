@@ -1,0 +1,59 @@
+﻿@model Quizowa.Models.Quiz
+
+@{
+    ViewData["Title"] = "Rozwiąż Quiz: " + Model.Title;
+}
+
+<h1>Rozwiąż Quiz: @Model.Title</h1>
+<p>@Model.Description</p>
+<hr />
+
+@if (Model.Questions == null || !Model.Questions.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Ten quiz nie zawiera pytań i nie może być rozwiązany.
+    </div>
+    <a asp-action="Index" class="btn btn-secondary">Powrót do listy quizów</a>
+}
+else
+{
+    <form asp-action="Submit" asp-route-quizId="@Model.Id" method="post">
+        @Html.AntiForgeryToken()
+
+        @for (int i = 0; i < Model.Questions.Count; i++)
+        {
+            var question = Model.Questions.ElementAt(i);
+            <div class="card mb-4">
+                <div class="card-header">
+                    Pytanie @(i + 1) / @Model.Questions.Count: @question.QuestionText
+                    <span class="float-end badge bg-info">@question.Points pkt</span>
+                </div>
+                <div class="card-body">
+                    @if (question.Answers != null && question.Answers.Any())
+                    {
+                        <div class="form-group">
+                            @foreach (var answer in question.Answers.OrderBy(a => Guid.NewGuid())) // Losowa kolejność odpowiedzi
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q_@question.Id" id="answer_@answer.Id" value="@answer.Id" required>
+                                    <label class="form-check-label" for="answer_@answer.Id">
+                                        @answer.AnswerText
+                                    </label>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-danger">To pytanie nie ma zdefiniowanych odpowiedzi.</p>
+                    }
+                </div>
+            </div>
+        }
+
+        <div class="form-group mt-3">
+            <input type="submit" value="Zakończ Quiz" class="btn btn-success" />
+            <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+        </div>
+    </form>
+}

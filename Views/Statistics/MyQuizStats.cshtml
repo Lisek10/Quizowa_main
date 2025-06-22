@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Quizowa.Models.QuizStatsViewModel>
+
+@{
+    ViewData["Title"] = "Statystyki Moich Quizów";
+}
+
+<h1>Statystyki Moich Quizów</h1>
+
+@if (!Model.Any())
+{
+    <p class="text-info">Nie masz jeszcze żadnych quizów, dla których można by wyświetlić statystyki.</p>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Tytuł Quizu</th>
+                <th>Liczba Wypełnień</th>
+                <th>Średni Wynik</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Quiz.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AttemptsCount)</td>
+                    <td>@item.AverageScore.ToString("F2") %</td>
+                    <td>
+                        <a asp-action="QuizDetails" asp-route-id="@item.Quiz.Id" class="btn btn-info btn-sm">Szczegóły</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,54 @@
+﻿@model Quizowa.Models.DetailedQuizStatsViewModel
+
+@{
+    ViewData["Title"] = "Statystyki dla: " + Model.Quiz.Title;
+}
+
+<h1>Statystyki dla Quizu: @Model.Quiz.Title</h1>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        Ogólne statystyki
+    </div>
+    <div class="card-body">
+        <p><strong>Całkowita liczba podejść:</strong> @Model.TotalAttempts</p>
+        <p><strong>Średni wynik:</strong> @Model.AverageScore.ToString("F2") %</p>
+    </div>
+</div>
+
+<h3>Statystyki Pytań</h3>
+@if (Model.QuestionStatistics == null || !Model.QuestionStatistics.Any())
+{
+    <p>Brak statystyk dla pytań w tym quizie.</p>
+}
+else
+{
+    @foreach (var questionStats in Model.QuestionStatistics)
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Pytanie: @questionStats.QuestionText</h5>
+                <ul class="list-group list-group-flush">
+                    @foreach (var answerStats in questionStats.AnswerStatistics)
+                    {
+                        <li class="list-group-item @(answerStats.IsCorrect ? "list-group-item-success" : "")">
+                            @answerStats.AnswerText
+                            <span class="float-end">
+                                @answerStats.SelectedPercentage.ToString("F2")%
+                            @if (answerStats.IsCorrect)
+                            {
+                                <i class="bi bi-check-circle-fill text-success ms-2" title="Poprawna odpowiedź"></i>
+                            }
+                        </span>
+                    </li>
+                }
+                </ul>
+            </div>
+        </div>
+    }
+}
+
+<div>
+    <a asp-action="MyQuizStats" class="btn btn-secondary">Powrót do moich statystyk</a>
+    <a asp-controller="Quiz" asp-action="Details" asp-route-id="@Model.Quiz.Id" class="btn btn-info">Szczegóły Quizu</a>
+</div>

@@ -1,0 +1,44 @@
+@model List<Quizowa.Models.QuizResult>
+
+@{
+    ViewData["Title"] = "Statystyki Użytkownika";
+}
+
+<h1>Statystyki Twoich Quizów</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Nie masz jeszcze żadnych rozwiązanych quizów.</p>
+    <p><a asp-action="Index" class="btn btn-primary">Przeglądaj Quizy</a></p>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Quiz</th>
+                <th>Twój wynik</th>
+                <th>Maksymalny wynik</th>
+                <th>Data rozwiązania</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in Model)
+            {
+                <tr>
+                    <td>@result.Quiz?.Title</td>
+                    <td>@result.Score</td>
+                    <td>@result.MaxScore</td>
+                    <td>@result.QuizDate.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        @* Możesz dodać link do widoku Detali dla tego konkretnego QuizResult, jeśli masz taki widok *@
+                        @* <a asp-action="Result" asp-route-id="@result.Id">Szczegóły</a> *@
+                        @* Obecnie widok Result przyjmuje obiekt QuizResult, a nie ID, więc nie możemy linkować w ten sposób.
+                           Możesz to zmienić, żeby akcja Result przyjmowała ID QuizResult i pobierała go z bazy. *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

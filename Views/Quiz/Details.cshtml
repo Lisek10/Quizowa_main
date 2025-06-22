@@ -1,0 +1,68 @@
+﻿@model Quizowa.Models.Quiz
+
+@{
+    ViewData["Title"] = "Szczegóły Quizu";
+}
+
+<h1>Szczegóły Quizu: @Model.Title</h1>
+
+<div>
+    <h4>Quiz</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+
+    <h2>Pytania</h2>
+    @if (Model.Questions != null && Model.Questions.Any())
+    {
+        @foreach (var question in Model.Questions)
+        {
+            <div class="card mb-3">
+                <div class="card-header">
+                    <strong>@question.QuestionText</strong> (@question.Points Pkt)
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        @if (question.Answers != null && question.Answers.Any())
+                        {
+                            @foreach (var answer in question.Answers)
+                            {
+                                <li class="list-group-item @(answer.IsCorrect ? "list-group-item-success" : "")"> @* Zmieniono na answer.IsCorrect *@
+                                    @answer.AnswerText
+                                    @if (answer.IsCorrect) @* Zmieniono na answer.IsCorrect *@
+                                    {
+                                        <span class="badge bg-success float-end">Poprawna</span>
+                                    }
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            <li class="list-group-item">Brak odpowiedzi do tego pytania.</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>Ten quiz nie zawiera pytań.</p>
+    }
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edytuj</a> |
+    <a asp-action="Index" class="btn btn-outline-secondary">Wróć do listy</a>
+</div>

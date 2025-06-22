@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Quizowa
+build_property.RootNamespace = Quizowa
+build_property.ProjectDir = /Users/makslisowski/Desktop/Quizowa-main/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/makslisowski/Desktop/Quizowa-main
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/MyQuizzes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9NeVF1aXp6ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/MyStatistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9NeVN0YXRpc3RpY3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9SZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/Solve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9Tb2x2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/UserStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9Vc2VyU3RhdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Quiz/_QuestionFormPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9fUXVlc3Rpb25Gb3JtUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Shared/_AnswerFormPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BbnN3ZXJGb3JtUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Statistics/MyQuizStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGlzdGljcy9NeVF1aXpTdGF0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Statistics/QuizDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGlzdGljcy9RdWl6RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/makslisowski/Desktop/Quizowa-main/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-e9x6a1weg0

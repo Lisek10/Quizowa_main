@@ -1,0 +1,60 @@
+﻿@model Quizowa.Models.Quiz
+
+@{
+    ViewData["Title"] = "Utwórz Nowy Quiz";
+}
+
+<h1>Utwórz Nowy Quiz</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Create" method="post">
+            <input type="hidden" asp-for="ApplicationUserId" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <h2>Pytania</h2>
+            <hr />
+            <div id="questionsContainer">
+                @if (Model.Questions != null)
+                {
+                    for (int i = 0; i < Model.Questions.Count; i++)
+                    {
+                        @* KLUCZOWA ZMIANA: Tworzymy nowy, pusty ViewDataDictionary.
+                           W ten sposób upewniamy się, że QuestionIndex jest dodawany tylko raz.
+                           ViewDataDictionary(Html.ViewData) może działać w niektórych scenariuszach,
+                           ale użycie pustego konstruktora, a potem jawne dodanie, jest najbardziej bezpieczne. *@
+                        <partial name="_QuestionFormPartial"
+                                 model="Model.Questions[i]"
+                                 view-data='new ViewDataDictionary(ViewData) { { "QuestionIndex", i } }' />
+                    }
+                }
+            </div>
+
+            <div class="form-group mb-4">
+                <button type="button" class="btn btn-secondary" id="add-question-btn">Dodaj Pytanie</button>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Utwórz Quiz" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-outline-secondary">Powrót do listy</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

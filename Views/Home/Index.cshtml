@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Strona Główna";
+}
+
+<div class="text-center bg-light p-5 rounded-lg shadow-sm mb-5">
+    <h1 class="display-4 text-primary">Witaj w Quizowej!</h1>
+    <p class="lead mt-3">Sprawdź swoją wiedzę, twórz własne quizy i rywalizuj z innymi!</p>
+    <hr class="my-4">
+    <p>Gotowy na wyzwanie? Zagraj w quiz lub stwórz swój własny!</p>
+    <a asp-controller="Quiz" asp-action="Index" class="btn btn-primary btn-lg me-3">Przeglądaj Quizy</a>
+    <a asp-controller="Quiz" asp-action="Create" class="btn btn-outline-primary btn-lg">Stwórz Swój Quiz</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <h2 class="text-secondary mb-3">Odkrywaj Nowe Quizy</h2>
+        <p>W naszej stale rosnącej kolekcji quizów znajdziesz tematy z różnych dziedzin. Od historii, przez naukę, aż po popkulturę – zawsze znajdziesz coś dla siebie. Codziennie pojawiają się nowe wyzwania!</p>
+        <img src="~/images/quiz1.jpg" alt="Quiz Banner" class="img-fluid rounded shadow-sm mt-3">
+    </div>
+    <div class="col-md-6">
+        <h2 class="text-secondary mb-3">Twórz i Dziel się</h2>
+        <p>Masz unikalną wiedzę? Stwórz własny quiz i podziel się nim ze znajomymi! Nasze intuicyjne narzędzia do tworzenia quizów pozwalają na szybkie i łatwe projektowanie, dodawanie pytań i ustawianie punktacji.</p>
+        <ul class="list-unstyled mt-3">
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Łatwe tworzenie pytań wielokrotnego wyboru.</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Dodawanie obrazków do pytań.</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Śledzenie statystyk i wyników.</li>
+        </ul>
+        <img src="~/images/quiz2.jpeg" alt="Create Quiz Banner" class="img-fluid rounded shadow-sm mt-3">
+    </div>
+</div>
+
+<div class="mt-5 text-center p-4 bg-light rounded-lg shadow-sm">
+    <h2 class="text-primary">Gotów, by zacząć?</h2>
+    <p class="lead">Dołącz do naszej społeczności i zostań mistrzem quizów!</p>
+    <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-success btn-lg">Zarejestruj się za darmo</a>
+</div>

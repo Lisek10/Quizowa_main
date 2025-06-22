@@ -1,0 +1,33 @@
+﻿@model Quizowa.Models.Quiz
+
+@{
+    ViewData["Title"] = "Usuń Quiz";
+}
+
+<h1>Usuń Quiz</h1>
+
+<h3>Czy na pewno chcesz usunąć ten quiz? Ta operacja jest nieodwracalna i usunie wszystkie powiązane pytania, odpowiedzi oraz podejścia do quizu!</h3>
+<div>
+    <h4>@Html.DisplayFor(model => model.Title)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Autor
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.ApplicationUser?.UserName ?? "Nieznany")
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="MyQuizzes" class="btn btn-secondary">Anuluj</a>
+    </form>
+</div>

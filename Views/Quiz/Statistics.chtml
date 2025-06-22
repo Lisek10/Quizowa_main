@@ -1,0 +1,58 @@
+@model Quizowa.Models.Quiz
+@{
+    ViewData["Title"] = "Statystyki Quizu: " + Model.Title;
+    var totalAttempts = ViewBag.TotalAttempts as int? ?? 0;
+    var averageScore = ViewBag.AverageScore as double? ?? 0.0;
+    var questionAnswerStats = ViewBag.QuestionAnswerStats as Dictionary<Quizowa.Models.Question, Dictionary<Quizowa.Models.Answer, double>>;
+}
+
+<h1>Statystyki dla quizu: @Model.Title</h1>
+<p>Opis: @Model.Description</p>
+<p>Autor: @(Model.ApplicationUser?.UserName ?? "Nieznany")</p>
+
+---
+
+<h2>Podsumowanie wyników</h2>
+<p>Liczba wypełnień: **@totalAttempts**</p>
+<p>Średni wynik: **@averageScore.ToString("F2")%**</p>
+
+---
+
+<h2>Szczegółowe statystyki pytań</h2>
+
+@if (questionAnswerStats != null && questionAnswerStats.Any())
+{
+    @foreach (var entry in questionAnswerStats)
+    {
+        var question = entry.Key;
+        var answers = entry.Value;
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Pytanie: @question.QuestionText (Punkty: @question.Points)</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                @foreach (var answerEntry in answers)
+                {
+                    var answer = answerEntry.Key;
+                    var percentage = answerEntry.Value;
+                    <li class="list-group-item">
+                        @if (answer.IsCorrect)
+                        {
+                            <span class="badge bg-success">Prawidłowa</span>
+                        }
+                        **@answer.AnswerText** - Wybrało **@percentage.ToString("F2")%** osób
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+}
+else
+{
+    <p>Brak danych statystycznych dla tego quizu.</p>
+}
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Powrót do listy quizów</a>
+</p>

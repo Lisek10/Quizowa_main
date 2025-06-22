@@ -1,0 +1,69 @@
+﻿@model Quizowa.Models.QuizResult
+
+@{
+    ViewData["Title"] = "Wyniki Quizu";
+}
+
+<h1>Wyniki Twojego Quizu: @(Model?.Quiz?.Title ?? "Nieznany Quiz")</h1>
+
+@if (Model != null)
+{
+    <p>Twój wynik: **@Model.Score / @Model.MaxScore**</p>
+
+    @if (Model.Quiz != null && Model.Quiz.Questions != null)
+    {
+        <h2>Twoje odpowiedzi:</h2>
+        <div class="list-group">
+            @foreach (var question in Model.Quiz.Questions)
+            {
+                <div class="list-group-item mb-3">
+                    <h4>@question.QuestionText (@question.Points punktów)</h4>
+                    @if (question.Answers != null && Model.UserAnswers != null && Model.UserAnswers.ContainsKey(question.Id))
+                    {
+                        var selectedAnswerId = Model.UserAnswers[question.Id];
+                        var selectedAnswer = question.Answers.FirstOrDefault(a => a.Id == selectedAnswerId);
+                        var correctAnswer = question.Answers.FirstOrDefault(a => a.Id == question.CorrectAnswerId);
+
+                        <p>Twoja odpowiedź:
+                            @if (selectedAnswer != null)
+                            {
+                                <span class="@(selectedAnswer.IsCorrect ? "text-success" : "text-danger")">
+                                    @selectedAnswer.AnswerText
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-warning">Brak odpowiedzi lub niepoprawna odpowiedź</span>
+                            }
+                        </p>
+                        @if (selectedAnswer?.IsCorrect != true && correctAnswer != null) // Sprawdzenie czy wybrana odpowiedź nie jest poprawna
+                        {
+                            <p>Poprawna odpowiedź: <span class="text-success">@correctAnswer.AnswerText</span></p>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-warning">Brak odpowiedzi na to pytanie.</p>
+                        var correctAnswer = question.Answers?.FirstOrDefault(a => a.Id == question.CorrectAnswerId);
+                        if (correctAnswer != null)
+                        {
+                            <p>Poprawna odpowiedź: <span class="text-success">@correctAnswer.AnswerText</span></p>
+                        }
+                    }
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-danger">Nie można załadować pytań quizu.</p>
+    }
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-primary">Wróć do listy quizów</a>
+    </div>
+}
+else
+{
+    <p class="text-danger">Wystąpił błąd podczas wyświetlania wyników quizu.</p>
+}

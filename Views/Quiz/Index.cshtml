@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Quizowa.Models.Quiz>
+
+@{
+    ViewData["Title"] = "Quizy";
+}
+
+<h1>Quizy</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Utwórz Nowy Quiz</a>
+</p>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                Utworzony przez
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @item.ApplicationUser?.UserName @* Używamy operatora null-conditional `?.` *@
+                </td>
+                <td>
+                    <a asp-action="Solve" asp-route-id="@item.Id" class="btn btn-info btn-sm">Rozwiąż</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Szczegóły</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edytuj</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,83 @@
+﻿@model Quizowa.Models.Quiz
+
+@{
+    ViewData["Title"] = "Edytuj quiz";
+}
+
+<h1>Edytuj quiz</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="ApplicationUserId" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ApplicationUserId" /> @* Zabezpieczenie przed nadpisaniem UserId *@
+
+            <div class="form-group mb-3">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <hr />
+            <h3>Pytania</h3>
+            <div id="questionsContainer">
+                @for (int i = 0; i < Model.Questions.Count; i++)
+                {
+                    @await Html.PartialAsync("_QuestionFormPartial", Model.Questions[i], new ViewDataDictionary(ViewData) { { "QuestionIndex", i } })
+                }
+            </div>
+            <button type="button" class="btn btn-info mt-3" id="addQuestion">Dodaj Pytanie</button>
+
+            <div class="form-group mt-4">
+                <input type="submit" value="Zapisz Zmiany" class="btn btn-success" />
+                <a asp-action="MyQuizzes" class="btn btn-secondary">Anuluj</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Inicjalizacja questionIndex na podstawie istniejących pytań
+        // Zauważ, że ten kod jest poza sekcją Razor @{ } w samym skrypcie
+        var questionIndex = $('#questionsContainer .question-block').length;
+
+        $(document).ready(function () {
+            $('#questionsContainer .question-block').each(function (qIndex) {
+                $(this).attr('data-question-index', qIndex);
+                $(this).find('.question-number').text(qIndex + 1);
+                $(this).find('input, textarea, select').each(function () {
+                    const originalName = $(this).attr('name');
+                    if (originalName) {
+                        $(this).attr('name', originalName.replace(/Questions\[\d+\]/, `Questions[${qIndex}]`));
+                    }
+                });
+                $(this).find('input[type="radio"]').each(function (aIndex) {
+                    const originalName = $(this).attr('name');
+                    if (originalName) {
+                        $(this).attr('name', originalName.replace(/Questions\[\d+\]\.IsCorrect/, `Questions[${qIndex}].IsCorrect`));
+                    }
+                });
+                $(this).find('.answers-container .answer-row').each(function (aIndex) {
+                    $(this).attr('data-answer-index', aIndex);
+                    $(this).find('input, textarea, select').each(function () {
+                        const originalName = $(this).attr('name');
+                        if (originalName) {
+                            $(this).attr('name', originalName.replace(/Answers\[\d+\]/, `Answers[${aIndex}]`));
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}

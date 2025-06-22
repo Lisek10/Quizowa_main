@@ -1,0 +1,32 @@
+@model Quizowa.Models.Answer
+@{
+    var questionIndex = ViewData["QuestionIndex"] as int? ?? 0;
+    var answerIndex = ViewData["AnswerIndex"] as int? ?? 0;
+    var uniqueAnswerTextId = $"Questions_{questionIndex}__Answers_{answerIndex}__AnswerText";
+    var uniqueRadioId = $"CorrectAnswer_Q{questionIndex}_A{answerIndex}"; // Nowe, w pełni unikalne ID dla radio buttona
+    var radioName = $"Questions[{questionIndex}].CorrectAnswerId"; // Ta nazwa musi być taka sama dla wszystkich radio w danym pytaniu
+}
+
+<div class="input-group mb-2 answer-item" data-answer-index="@answerIndex">
+    <div class="input-group-text">
+        <input type="radio"
+               name="Questions[@questionIndex].CorrectAnswerTempId"
+               id="@uniqueRadioId"
+               value="@Model.TempId"
+               class="form-check-input mt-0"
+               @(Model.IsCorrect ? "checked" : "") />
+    </div>
+    <input asp-for="AnswerText"
+           name="Questions[@questionIndex].Answers[@answerIndex].AnswerText"
+           id="@uniqueAnswerTextId"
+           class="form-control"
+           placeholder="Treść odpowiedzi" />
+    <input type="hidden"
+           name="Questions[@questionIndex].Answers[@answerIndex].Id"
+           value="@Model.Id" />
+    <input type="hidden"
+           name="Questions[@questionIndex].Answers[@answerIndex].TempId"
+           value="@Model.TempId" />
+    <button type="button" class="btn btn-outline-danger remove-answer-btn">Usuń</button>
+    <span asp-validation-for="AnswerText" class="text-danger"></span>
+</div>
