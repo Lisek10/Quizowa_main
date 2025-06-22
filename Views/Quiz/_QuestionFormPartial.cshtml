@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.ModelBinding
 @model Quizowa.Models.Question
 @{
-    // Pobierz wartość QuestionIndex, która została przekazana z widoku nadrzędnego
+    
     var questionIndex = ViewData["QuestionIndex"] as int? ?? 0;
     
     var uniqueQuestionTextId = $"Questions_{questionIndex}__QuestionText";
@@ -32,9 +32,7 @@
                 for (int i = 0; i < Model.Answers.Count; i++)
                 {
 
-                    @* KLUCZOWA ZMIANA: Tworzymy nowy, pusty ViewDataDictionary.
-                       To zapewni, że QuestionIndex i AnswerIndex są dodawane tylko raz,
-                       do czystego kontekstu, eliminując duplikacje. *@
+                   
                     <partial name="_AnswerFormPartial"
                              model="Model.Answers[i]"
                              view-data='new ViewDataDictionary<Quizowa.Models.Answer>(

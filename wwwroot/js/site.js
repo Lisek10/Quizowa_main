@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-  // --- Funkcje pomocnicze do aktualizacji indeksów ---
+  
   function updateQuestionIndexes() {
     $(".question-block").each(function (
       questionBlockIndex,
@@ -7,9 +7,9 @@
     ) {
       var oldQuestionIndex = $(questionBlockElement).data("question-index");
       $(questionBlockElement).data("question-index", questionBlockIndex);
-      $(questionBlockElement).attr("data-question-index", questionBlockIndex); // Użyj attr też dla pewności
+      $(questionBlockElement).attr("data-question-index", questionBlockIndex); 
 
-      // Aktualizacja pól na poziomie pytania
+      
       $(questionBlockElement)
         .find(":input")
         .each(function () {
@@ -36,7 +36,8 @@
         .each(function (answerItemIndex, answerItemElement) {
           var oldAnswerIndex = $(answerItemElement).data("answer-index");
           $(answerItemElement).data("answer-index", answerItemIndex);
-          $(answerItemElement).attr("data-answer-index", answerItemIndex); // Użyj attr też dla pewności
+          $(answerItemElement).attr("data-answer-index", answerItemIndex); 
+          
 
           $(answerItemElement)
             .find(":input")
@@ -44,7 +45,7 @@
               var name = $(this).attr("name");
               var id = $(this).attr("id");
 
-              // Aktualizuj name dla AnswerText i hidden Id
+              
               if (
                 name &&
                 name.includes(
@@ -59,7 +60,7 @@
                   )
                 );
               }
-              // Aktualizuj ID dla AnswerText
+              
               if (
                 id &&
                 id.includes(
@@ -72,14 +73,14 @@
                 );
               }
 
-              // Aktualizuj name i ID dla radio buttona CorrectAnswerId
+              
               if ($(this).is('input[type="radio"]')) {
                 var radioName = `Questions[${questionBlockIndex}].CorrectAnswerTempId`;
                 $(this).attr("name", radioName);
                 $(this).attr(
                   "id",
                   `CorrectAnswer_Q${questionBlockIndex}_A${answerItemIndex}`
-                ); // Zaktualizuj ID dla radio buttona
+                ); 
               }
             });
         });

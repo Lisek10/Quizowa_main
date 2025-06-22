@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Quizowa</title>
 
-    @* Style Bootstrap CSS *@
+    
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    @* Twoje własne style CSS *@
+   
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    @* Style Bootstrap Icons (dla ikon, np. tych na stronie głównej) *@
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -33,7 +33,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Prywatność</a>
                         </li>
                     </ul>
-                    @* To jest ten plik _LoginPartial, który dodaliśmy wcześniej *@
+                    
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -51,17 +51,17 @@
         </div>
     </footer>
 
-    @* Podstawowy skrypt jQuery, musi być zawsze pierwszy dla bibliotek jQuery *@
+   
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @* Skrypty walidacyjne jQuery - KLUCZOWE dla walidacji po stronie klienta *@
+    
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    @* Skrypty Bootstrap JS (Popper i Bootstrap JS) *@
+    
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    @* Twój własny skrypt site.js - powinien być na końcu, po wszystkich zależnościach *@
+    
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @* Renderuj sekcję Scripts (dla skryptów specyficznych dla widoków) *@
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

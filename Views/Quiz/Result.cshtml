@@ -36,7 +36,7 @@
                                 <span class="text-warning">Brak odpowiedzi lub niepoprawna odpowiedź</span>
                             }
                         </p>
-                        @if (selectedAnswer?.IsCorrect != true && correctAnswer != null) // Sprawdzenie czy wybrana odpowiedź nie jest poprawna
+                        @if (selectedAnswer?.IsCorrect != true && correctAnswer != null) 
                         {
                             <p>Poprawna odpowiedź: <span class="text-success">@correctAnswer.AnswerText</span></p>
                         }

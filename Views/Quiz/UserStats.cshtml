@@ -32,10 +32,7 @@ else
                     <td>@result.MaxScore</td>
                     <td>@result.QuizDate.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</td>
                     <td>
-                        @* Możesz dodać link do widoku Detali dla tego konkretnego QuizResult, jeśli masz taki widok *@
-                        @* <a asp-action="Result" asp-route-id="@result.Id">Szczegóły</a> *@
-                        @* Obecnie widok Result przyjmuje obiekt QuizResult, a nie ID, więc nie możemy linkować w ten sposób.
-                           Możesz to zmienić, żeby akcja Result przyjmowała ID QuizResult i pobierała go z bazy. *@
+                       
                     </td>
                 </tr>
             }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quizowa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ab4787f8c202fb809245fb33080112e5185e11f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Quizowa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quizowa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -39,9 +39,9 @@
                         {
                             @foreach (var answer in question.Answers)
                             {
-                                <li class="list-group-item @(answer.IsCorrect ? "list-group-item-success" : "")"> @* Zmieniono na answer.IsCorrect *@
+                                <li class="list-group-item @(answer.IsCorrect ? "list-group-item-success" : "")"> 
                                     @answer.AnswerText
-                                    @if (answer.IsCorrect) @* Zmieniono na answer.IsCorrect *@
+                                    @if (answer.IsCorrect) 
                                     {
                                         <span class="badge bg-success float-end">Poprawna</span>
                                     }

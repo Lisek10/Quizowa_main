@@ -35,7 +35,7 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @item.ApplicationUser?.UserName @* Używamy operatora null-conditional `?.` *@
+                    @item.ApplicationUser?.UserName 
                 </td>
                 <td>
                     <a asp-action="Solve" asp-route-id="@item.Id" class="btn btn-info btn-sm">Rozwiąż</a> |

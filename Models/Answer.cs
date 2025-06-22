@@ -1,4 +1,4 @@
-﻿// W Quizowa/Models/Answer.cs
+﻿
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -20,8 +20,7 @@ namespace Quizowa.Models
         [StringLength(200, MinimumLength = 1, ErrorMessage = "Treść odpowiedzi musi mieć od 1 do 200 znaków.")]
         public required string AnswerText { get; set; }
 
-        // --- DODAJ TĘ LINIĘ, JEŚLI JEJ NIE MASZ ---
-        public bool IsCorrect { get; set; } // Zwracamy IsCorrect do modelu Answer
-        // --- KONIEC DODAWANIA LINI ---
+        
+        public bool IsCorrect { get; set; } 
     }
 }

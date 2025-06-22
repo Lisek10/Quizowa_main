@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json; // Dodaj to using!
+using Newtonsoft.Json; 
 using Quizowa.Data;
 using Quizowa.Models;
 using Quizowa.Services;
@@ -26,14 +26,14 @@ namespace Quizowa.Controllers
             _quizStatisticsService = quizStatisticsService;
         }
 
-        // GET: Quiz
+        
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Quizzes.Include(q => q.ApplicationUser);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Quiz/Details/5
+        
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -54,7 +54,7 @@ namespace Quizowa.Controllers
             return View(quiz);
         }
 
-        // GET: Quiz/Create
+        
         public IActionResult Create()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -85,7 +85,7 @@ namespace Quizowa.Controllers
             return View(quiz);
         }
 
-        // POST: Quiz/Create
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Quiz quiz)
@@ -169,7 +169,7 @@ namespace Quizowa.Controllers
         }
 
 
-        // GET: Quiz/Edit/5
+        
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -189,7 +189,7 @@ namespace Quizowa.Controllers
             return View(quiz);
         }
 
-        // POST: Quiz/Edit/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Questions,ApplicationUserId")] Quiz quiz)
@@ -228,7 +228,7 @@ namespace Quizowa.Controllers
                     }
                     else
                     {
-                        // Poprawka CS8602: Zmieniono na operator '!'
+                        
                         if (!question.Answers!.Any(a => a.Id == question.CorrectAnswerId.Value))
                         {
                              ModelState.AddModelError($"Questions[{i}].CorrectAnswerId", "Wybrana poprawna odpowiedź nie istnieje w tym pytaniu.");
@@ -322,7 +322,7 @@ namespace Quizowa.Controllers
                     {
                         if (!quiz.Questions!.Any(q => q.Id == oldQuestion.Id && q.Id > 0))
                         {
-                            // Usuń wszystkie odpowiedzi z tego pytania
+                            
                             foreach (var answer in oldQuestion.Answers!)
                             {
                                 _context.Answers.Remove(answer);
@@ -405,7 +405,7 @@ namespace Quizowa.Controllers
             return View(quiz);
         }
 
-        // GET: Quiz/Delete/5
+        
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -424,7 +424,7 @@ namespace Quizowa.Controllers
             return View(quiz);
         }
 
-        // POST: Quiz/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -466,7 +466,7 @@ namespace Quizowa.Controllers
         }
 
 
-        // GET: Quiz/Solve/5
+        
         public async Task<IActionResult> Solve(int? id)
         {
             if (id == null)
@@ -487,7 +487,7 @@ namespace Quizowa.Controllers
             return View(quiz);
         }
 
-        // POST: Quiz/Submit
+        
         [HttpPost]
         public async Task<IActionResult> Submit(int quizId, IFormCollection form)
         {
@@ -514,7 +514,7 @@ namespace Quizowa.Controllers
             }
 
             int score = 0;
-            var userAnswersDictionary = new Dictionary<int, int>(); // Zmieniona nazwa zmiennej
+            var userAnswersDictionary = new Dictionary<int, int>(); 
 
             foreach (var question in quiz.Questions!)
             {
@@ -532,7 +532,7 @@ namespace Quizowa.Controllers
                 }
             }
 
-            // *** KLUCZOWA POPRAWKA CS9035: Inicjalizujemy UserAnswersJson tutaj
+            
             var quizResult = new QuizResult
             {
                 QuizId = quiz.Id,
@@ -541,12 +541,11 @@ namespace Quizowa.Controllers
                 ApplicationUser = user,
                 Score = score,
                 MaxScore = quiz.Questions!.Sum(q => q.Points),
-                // W tym miejscu bezpośrednio ustawiamy UserAnswersJson
-                UserAnswersJson = JsonConvert.SerializeObject(userAnswersDictionary), // Upewnij się, że masz using Newtonsoft.Json;
+                
+                UserAnswersJson = JsonConvert.SerializeObject(userAnswersDictionary), 
                 QuizDate = DateTime.UtcNow
             };
-            // Nie przypisujemy już do właściwości UserAnswers, ponieważ UserAnswersJson jest już ustawione.
-            // Setter UserAnswers i tak ustawiał UserAnswersJson, ale kompilator 'required' oczekuje bezpośredniego ustawienia w inicjalizatorze.
+            
 
             _context.QuizResults.Add(quizResult);
             await _context.SaveChangesAsync();
@@ -554,23 +553,19 @@ namespace Quizowa.Controllers
             return View("Result", quizResult);
         }
 
-        // GET: Quiz/Result
+        
         public IActionResult Result(QuizResult quizResult)
         {
-            // Możemy potrzebować załadować Quiz i Questions/Answers ponownie
-            // ponieważ QuizResult przekazywany jest z poprzedniej akcji i nie ma załadowanych tych kolekcji.
-            // Sprawdzenie quizResult.Quiz.Questions jest tutaj ważne.
-            if (quizResult == null || quizResult.Quiz == null || !quizResult.Quiz.Questions.Any()) // Dodano .Any()
+            
+            if (quizResult == null || quizResult.Quiz == null || !quizResult.Quiz.Questions.Any()) 
             {
-                // Alternatywnie, jeśli quizResult.Id jest dostępne, możemy załadować je z bazy danych
-                // aby mieć pełne dane do wyświetlenia w widoku.
-                // Na potrzeby tej poprawki, zakładamy, że Quiz i Questions są już dostępne.
+                
                 return RedirectToAction(nameof(Index));
             }
             return View(quizResult);
         }
 
-        // GET: Quiz/UserStats
+        
         public async Task<IActionResult> UserStats()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -588,7 +583,7 @@ namespace Quizowa.Controllers
             return View(userQuizResults);
         }
 
-        // Akcja POST: Quiz/AddQuestion (zwraca PartialView)
+       
         [HttpPost]
         public IActionResult AddQuestion(int questionIndex)
         {
@@ -606,7 +601,7 @@ namespace Quizowa.Controllers
             return PartialView("_QuestionFormPartial", newQuestion);
         }
 
-        // Akcja POST: Quiz/AddAnswer (zwraca PartialView)
+        
         [HttpPost]
         public IActionResult AddAnswer(int questionIndex, int answerIndex)
         {

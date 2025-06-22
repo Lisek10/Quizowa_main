@@ -354,7 +354,6 @@
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/yfc7ypekbg-mlv21k5csn.gz
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/fhldj372e9-7tzq44ctie.gz
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/gi81sz9yfn-61n19gt1b8.gz
-/Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/w0qn63yoz1-k6e7vqygf8.gz
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/cs8l5agg1r-ac7iay2b3k.gz
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/rk65sxezd9-st1cbwfwo5.gz
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/w7vitkx7xk-unj9p35syc.gz
@@ -423,3 +422,5 @@
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/Quizowa.pdb
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/Quizowa.genruntimeconfig.cache
 /Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/ref/Quizowa.dll
+/Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/Quizowa.sourcelink.json
+/Users/makslisowski/Desktop/Quizowa-main/obj/Debug/net9.0/compressed/w0qn63yoz1-muj7y3vrac.gz

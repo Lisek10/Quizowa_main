@@ -13,7 +13,7 @@
             <input type="hidden" asp-for="ApplicationUserId" />
             <div asp-validation-summary="All" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="ApplicationUserId" /> @* Zabezpieczenie przed nadpisaniem UserId *@
+            <input type="hidden" asp-for="ApplicationUserId" /> 
 
             <div class="form-group mb-3">
                 <label asp-for="Title" class="control-label"></label>
@@ -48,8 +48,7 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
-        // Inicjalizacja questionIndex na podstawie istniejących pytań
-        // Zauważ, że ten kod jest poza sekcją Razor @{ } w samym skrypcie
+        
         var questionIndex = $('#questionsContainer .question-block').length;
 
         $(document).ready(function () {

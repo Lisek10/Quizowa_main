@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Quizowa.Models;
-using System.Reflection.Emit; // Nadal potrzebne, jeśli używasz Entity Framework Core
+using System.Reflection.Emit; 
 
 namespace Quizowa.Data
 {
@@ -21,13 +21,13 @@ namespace Quizowa.Data
         {
             base.OnModelCreating(builder);
 
-            // Relacje dla Quiz
+            
             builder.Entity<Quiz>()
                 .HasOne(q => q.ApplicationUser)
-                .WithMany(u => u.Quizzes) // Teraz ta kolekcja istnieje w ApplicationUser
+                .WithMany(u => u.Quizzes) 
                 .HasForeignKey(q => q.ApplicationUserId);
 
-            // Relacje dla Question
+            
             builder.Entity<Question>()
                 .HasOne(q => q.Quiz)
                 .WithMany(qz => qz.Questions)
@@ -39,13 +39,13 @@ namespace Quizowa.Data
                .HasForeignKey(q => q.CorrectAnswerId)
                .OnDelete(DeleteBehavior.SetNull);
 
-            // Relacje dla Answer
+           
             builder.Entity<Answer>()
                 .HasOne(a => a.Question)
                 .WithMany(q => q.Answers)
                 .HasForeignKey(a => a.QuestionId);
 
-            // Relacje dla QuizResult (NOWE)
+            
             builder.Entity<QuizResult>()
                 .HasOne(qr => qr.Quiz)
                 .WithMany()
@@ -54,7 +54,7 @@ namespace Quizowa.Data
 
             builder.Entity<QuizResult>()
                 .HasOne(qr => qr.ApplicationUser)
-                .WithMany(u => u.QuizResults) // Teraz ta kolekcja istnieje w ApplicationUser
+                .WithMany(u => u.QuizResults) 
                 .HasForeignKey(qr => qr.ApplicationUserId)
                 .OnDelete(DeleteBehavior.Restrict);
 

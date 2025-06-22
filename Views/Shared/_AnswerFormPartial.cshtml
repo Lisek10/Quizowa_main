@@ -3,8 +3,8 @@
     var questionIndex = ViewData["QuestionIndex"] as int? ?? 0;
     var answerIndex = ViewData["AnswerIndex"] as int? ?? 0;
     var uniqueAnswerTextId = $"Questions_{questionIndex}__Answers_{answerIndex}__AnswerText";
-    var uniqueRadioId = $"CorrectAnswer_Q{questionIndex}_A{answerIndex}"; // Nowe, w pełni unikalne ID dla radio buttona
-    var radioName = $"Questions[{questionIndex}].CorrectAnswerId"; // Ta nazwa musi być taka sama dla wszystkich radio w danym pytaniu
+    var uniqueRadioId = $"CorrectAnswer_Q{questionIndex}_A{answerIndex}"; 
+    var radioName = $"Questions[{questionIndex}].CorrectAnswerId"; 
 }
 
 <div class="input-group mb-2 answer-item" data-answer-index="@answerIndex">

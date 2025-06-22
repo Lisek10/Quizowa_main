@@ -1,4 +1,4 @@
-﻿// W Quizowa/Models/Quiz.cs
+﻿
 
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -23,9 +23,8 @@ namespace Quizowa.Models
 
         public List<Question> Questions { get; set; } = new List<Question>();
 
-        // --- DODAJ TĘ LINIĘ, JEŚLI JEJ NIE MASZ ---
-        // Dodajemy kolekcję QuizResults do modelu Quiz
+        
         public ICollection<QuizResult> QuizResults { get; set; } = new List<QuizResult>();
-        // --- KONIEC DODAWANIA LINI ---
+        
     }
 }
